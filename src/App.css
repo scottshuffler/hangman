@@ -1,0 +1,197 @@
+body {
+  background-color: #282c34;
+}
+
+.App {
+  text-align: center;
+  /* background-color: #282c34; */
+
+}
+
+.App-logo {
+  /* animation: App-logo-spin infinite 20s linear;
+  height: 40vmin; */
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+svg {
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+line {
+  stroke: black;
+  stroke-width: 4;
+}
+
+#door1 {
+  transform-origin: 0% 100%;
+}
+
+#door2 {
+  transform-origin: 100% 100%;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#rreye {
+  animation: blink 2.4s infinite;
+}
+
+@keyframes blink {
+  90% {
+    transform: none;
+    animation-timing-function: ease-in;
+    r: "3";
+  }
+  93% {
+    transform: translateY(15px) scaleY(0);
+    r: "1";
+  }
+  100% {
+    animation-timing-function: ease-out;
+    r: "0";
+  }
+}
+.invisible {
+  visibility: hidden;
+}
+
+svg {
+  width: 240px;
+  height: 240px;
+  background: #eee;
+}
+svg #rreye {
+  fill: none;
+  stroke: red;
+  stroke-width: 4;
+  transition: all 4s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .hangman-keyboard button {
+    width: 30px;
+    line-height: 23px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    margin: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+} 
+
+@media only screen and (min-width: 600px) {
+  .hangman-keyboard button {
+    width: 30px;
+    line-height: 23px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    margin: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+  }
+} 
+
+@media only screen and (max-width: 3840px) {
+
+  /* .hangman-keyboard {
+    height: 10vh;
+  } */
+
+  .hangman-keyboard button {
+    width: 30px;
+    line-height: 23px;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    color: white;
+    margin: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    font-size: inherit;
+    height: 10vh;
+
+  }
+} 
+
+@media (hover:hover) {
+  button:hover {
+    transform: scale(1.5) perspective(1px)
+  }
+}
+.hangman-keyboard button[disabled] {
+  opacity: 0.5;
+}
+
+.letter-slots {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.letter-slots .letter-slot {
+  display: inline-block;
+  border-bottom: 2px solid #fff;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  margin: 3px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 24px;
+  vertical-align: bottom;
+}
+.letter-slots .letter-slot.revealed {
+  color: #678;
+}
+
+.hide {
+  display: none;
+}
+
+.st0{fill:#FFFFFF;}
+	.st1{fill:#FFFFFF;}
+	
+	@keyframes open {
+		0% { ry: 61.7; }
+		95% { ry: 61.7; }
+		100% { ry: 0; }
+	}
+	.left-eye, .right-eye {
+		animation-name: open;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+	}
